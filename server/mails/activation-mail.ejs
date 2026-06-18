@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Av LMS Account Activation</title>
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      background: #f4f7fb;
+      font-family: Arial, Helvetica, sans-serif;
+    "
+  >
+    <table width="100%" cellpadding="0" cellspacing="0" style="padding: 40px 0">
+      <tr>
+        <td align="center">
+          ```
+          <table
+            width="600"
+            cellpadding="0"
+            cellspacing="0"
+            style="
+              background: #ffffff;
+              border-radius: 16px;
+              overflow: hidden;
+              box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            "
+          >
+            <tr>
+              <td
+                align="center"
+                style="
+                  background: linear-gradient(135deg, #2563eb, #7c3aed);
+                  padding: 40px 30px;
+                "
+              >
+                <h1
+                  style="
+                    color: #ffffff;
+                    margin: 0;
+                    font-size: 34px;
+                    letter-spacing: 1px;
+                  "
+                >
+                  Av LMS
+                </h1>
+
+                <p style="color: #e5e7eb; margin-top: 10px; font-size: 15px">
+                  Learn. Build. Grow.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding: 40px">
+                <h2 style="margin-top: 0; color: #111827">
+                  Welcome, <%= user.name %> 👋
+                </h2>
+
+                <p style="color: #4b5563; line-height: 1.8; font-size: 15px">
+                  Thank you for registering on AB LMS. To activate your account,
+                  please use the verification code below.
+                </p>
+
+                <div style="text-align: center; margin: 35px 0">
+                  <div
+                    style="
+                      display: inline-block;
+                      background: #f3f4f6;
+                      border: 2px dashed #2563eb;
+                      border-radius: 12px;
+                      padding: 20px 40px;
+                    "
+                  >
+                    <span
+                      style="
+                        font-size: 34px;
+                        font-weight: 700;
+                        letter-spacing: 8px;
+                        color: #2563eb;
+                      "
+                    >
+                      <%= activationCode %>
+                    </span>
+                  </div>
+                </div>
+
+                <p style="color: #6b7280; line-height: 1.8; font-size: 15px">
+                  This activation code will expire in
+                  <strong>5 minutes</strong>.
+                </p>
+
+                <p style="color: #6b7280; line-height: 1.8; font-size: 15px">
+                  If you did not create this account, you can safely ignore this
+                  email.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td
+                style="
+                  background: #f9fafb;
+                  padding: 30px;
+                  border-top: 1px solid #e5e7eb;
+                "
+              >
+                <p style="margin: 0; color: #111827; font-weight: 600">
+                  Best Regards,
+                </p>
+
+                <p
+                  style="
+                    margin: 8px 0 0;
+                    color: #2563eb;
+                    font-size: 18px;
+                    font-weight: 700;
+                  "
+                >
+                  Aman Vijay Thakur
+                </p>
+
+                <p style="margin: 5px 0 0; color: #6b7280; font-size: 14px">
+                  Founder, Av LMS
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td
+                align="center"
+                style="
+                  background: #111827;
+                  color: #d1d5db;
+                  padding: 18px;
+                  font-size: 13px;
+                "
+              >
+                © 2026 Av LMS. All Rights Reserved.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      ```
+    </table>
+  </body>
+</html>

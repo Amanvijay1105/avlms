@@ -7,6 +7,7 @@ import {
   registerUser,
   socialAuth,
   updateAccessToken,
+  updateProfilePicture,
   updateUserInfo,
   updateUserPassword,
 } from "../controllers/user.controller.js";
@@ -22,5 +23,5 @@ router.get("/me",isAuthenticated,getUserInfo)
 router.post("/socialAuth",socialAuth)
 router.post("/update-user-info",isAuthenticated,updateUserInfo)
 router.post("/update-user-password",isAuthenticated,updateUserPassword)
-
+router.post("/update-user-avatar",isAuthenticated,updateProfilePicture)
 export default router;

@@ -326,6 +326,10 @@ export const updateUserInfo = CatchAsyncError(
       await user?.save();
 
       await redis.set(userId.toString(), JSON.stringify(user));
+      res.status(200).json({
+        success: true,
+        user,
+      });
     } catch (error: any) {
       return next(new ErrorHandler(error.message, 400));
     }

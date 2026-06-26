@@ -1,0 +1,212 @@
+```ejs
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Confirmation</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f7fb;
+      padding: 40px 15px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 650px;
+      margin: auto;
+      background: #ffffff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .header {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: #ffffff;
+      text-align: center;
+      padding: 35px;
+    }
+
+    .header h1 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      opacity: 0.9;
+      font-size: 15px;
+    }
+
+    .content {
+      padding: 35px;
+    }
+
+    .success {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      background: #22c55e;
+      color: white;
+      text-align: center;
+      line-height: 75px;
+      font-size: 36px;
+      margin: 0 auto 30px;
+      font-weight: bold;
+    }
+
+    .message {
+      text-align: center;
+      font-size: 17px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+
+    .row:last-child {
+      margin-bottom: 0;
+    }
+
+    .label {
+      color: #64748b;
+      font-size: 15px;
+    }
+
+    .value {
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .price {
+      color: #2563eb;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .button-wrapper {
+      text-align: center;
+      margin: 35px 0;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 32px;
+      text-decoration: none;
+      background: #2563eb;
+      color: white !important;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .footer {
+      padding: 25px;
+      text-align: center;
+      background: #f8fafc;
+      color: #64748b;
+      font-size: 14px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    @media(max-width:600px){
+      .row{
+        flex-direction:column;
+        gap:6px;
+      }
+
+      .content{
+        padding:25px;
+      }
+
+      .header h1{
+        font-size:24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <h1>🎉 Order Confirmed!</h1>
+    <p>Thank you for purchasing your course.</p>
+  </div>
+
+  <div class="content">
+
+    <div class="success">
+      ✓
+    </div>
+
+    <div class="message">
+      Your payment has been received successfully. Your course has been added to your account and is ready to start learning.
+    </div>
+
+    <div class="card">
+
+      <div class="row">
+        <span class="label">Order ID</span>
+        <span class="value">#<%= order._id %></span>
+      </div>
+
+      <div class="row">
+        <span class="label">Course</span>
+        <span class="value"><%= order.name %></span>
+      </div>
+
+      <div class="row">
+        <span class="label">Purchase Date</span>
+        <span class="value"><%= order.date %></span>
+      </div>
+
+      <div class="row">
+        <span class="label">Amount Paid</span>
+        <span class="price">₹ <%= order.price %></span>
+      </div>
+
+    </div>
+
+    <div class="button-wrapper">
+      <a href="<%= process.env.CLIENT_URL %>" class="button">
+        Go To Dashboard
+      </a>
+    </div>
+
+    <div class="message">
+      We appreciate your trust in us. Keep learning and enjoy your journey!
+    </div>
+
+  </div>
+
+  <div class="footer">
+    © <%= new Date().getFullYear() %> AVLMS. All rights reserved.
+  </div>
+
+</div>
+
+</body>
+</html>
+```
